@@ -15,7 +15,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-        sh 'java -jar target/*.jar'
+        sh 'ansible-playbook playbook.yml  -i hostfile'
       }
     }
 
